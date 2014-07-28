@@ -1,0 +1,9 @@
+Building BitTor
+
+See doc/readme-qt.rst for instructions on building BitTor-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of BitTor.
+
+See doc/build-*.txt for instructions on building bittord,
+the intended-for-services, no-graphical-interface, reference
+implementation of BitTor.
