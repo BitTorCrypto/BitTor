@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = bittor-qt
 macx:TARGET = "BitTor-Qt"
-VERSION = 0.1.3.1
+VERSION = 1.1.0.1
 INCLUDEPATH += src src/json src/qt src/tor
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -222,6 +222,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/limitedmap.h \
     src/qt/macnotificationhandler.h \
     src/qt/splashscreen.h \
+	src/qt/chatwindow.h \
+	src/qt/serveur.h \
     src/sph_blake.h \
     src/sph_bmw.h \
     src/sph_cubehash.h \
@@ -252,6 +254,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
     src/qt/bitcoinaddressvalidator.cpp \
+	src/qt/chatwindow.cpp \
     src/tor/address.c \
     src/tor/addressmap.c \
     src/tor/aes.c \
@@ -381,6 +384,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/notificator.cpp \
     src/qt/paymentserver.cpp \
     src/qt/rpcconsole.cpp \
+	src/qt/serveur.cpp \
     src/scrypt.cpp \
     src/noui.cpp \
     src/leveldb.cpp \
@@ -415,7 +419,8 @@ FORMS += src/qt/forms/sendcoinsdialog.ui \
     src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
-    src/qt/forms/optionsdialog.ui
+    src/qt/forms/optionsdialog.ui \
+	src/qt/forms/chatwindow.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h
